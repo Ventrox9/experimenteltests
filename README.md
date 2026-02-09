@@ -4,13 +4,11 @@ Dies ist ein robustes Framework für einen Trading-Bot, entwickelt, um mit virtu
 
 ## Features
 
-- **Echte Marktdaten**: Lädt aktuelle Kryptowährungs-Daten (Standard: Bitcoin) von der Coinbase API (oder fällt auf Dummy-Daten zurück).
-- **Strategie-Optimierung**: Testet automatisch verschiedene Parameter (z.B. Gleitende Durchschnitte), um die profitabelste Einstellung für die aktuellen Marktbedingungen zu finden.
+- **Echte Marktdaten**: Lädt aktuelle Kryptowährungs-Daten (Standard: Bitcoin) von der Coinbase API.
+- **Strategie-Optimierung**: Testet automatisch verschiedene Parameter, um die profitabelste Einstellung für die aktuellen Marktbedingungen zu finden.
+- **Live Paper Trading**: Simuliert den Handel in Echtzeit mit aktuellen Preisen.
 - **Risikomanagement**: Verhindert, dass das Kapital unter Null fällt. Das Portfolio startet mit 100 Einheiten virtuellem Kapital.
-- **Gebühren**: Simuliert realistische Handelsgebühren (Standard 0.1%).
-- **Logging & Analyse**:
-    - Detaillierte Logs in `logs/trading_bot.log`.
-    - CSV-Export aller Testergebnisse in `optimization_results.csv`.
+- **Logging & Analyse**: Detaillierte Logs in `logs/trading_bot.log` und CSV-Export.
 
 ## Installation
 
@@ -21,41 +19,45 @@ Dies ist ein robustes Framework für einen Trading-Bot, entwickelt, um mit virtu
 pip install -r requirements.txt
 ```
 
-*Hinweis: `requests` wird benötigt, um Marktdaten zu laden.*
-
 ## Tests ausführen
-
-Um sicherzustellen, dass alles korrekt funktioniert, führe die Tests aus:
 
 ```bash
 export PYTHONPATH=$PYTHONPATH:.
 pytest tests/
 ```
 
-## Bot starten (Optimierung & Simulation)
+## Verwendung
 
-Um den Bot zu starten:
+### 1. Backtest & Optimierung (Standard)
+
+Analysiert historische Daten der letzten 12 Tage und findet die beste Strategie.
 
 ```bash
 export PYTHONPATH=$PYTHONPATH:.
 python main.py
 ```
 
-### Was passiert dann?
-1. **Daten laden**: Der Bot lädt die Bitcoin-Preise der letzten ~12 Tage.
-2. **Optimierung**: Er testet verschiedene Kombinationen von "Short Window" und "Long Window" für die Strategie.
-3. **Ergebnis**: Er wählt die Kombination mit dem höchsten Gewinn.
-4. **Simulation**: Er führt die beste Strategie erneut aus und zeigt detaillierte Informationen zu jedem Trade an.
-5. **Speichern**: Die Ergebnisse aller Tests werden in `optimization_results.csv` gespeichert.
+### 2. Live Paper Trading (Echtzeit)
+
+Startet den Bot im Live-Modus.
+1. Lädt historische Daten zum "Aufwärmen" der Indikatoren.
+2. Optimiert die Parameter basierend auf den letzten 12 Tagen.
+3. Startet eine Endlosschleife, die alle 60 Sekunden den aktuellen Bitcoin-Preis von Coinbase abruft und handelt (virtuell).
+
+```bash
+export PYTHONPATH=$PYTHONPATH:.
+python main.py --live
+```
+
+Beenden mit `Ctrl+C`.
 
 ## Ergebnisse analysieren
 
-- **Konsole**: Zeigt den Gewinner und den ROI (Return on Investment) an.
-- **optimization_results.csv**: Öffne diese Datei in Excel oder Google Sheets, um zu sehen, welche Parameter gut oder schlecht funktioniert haben. Das hilft beim "Feinschliff".
-- **logs/trading_bot.log**: Hier kannst du jeden einzelnen Schritt und Trade nachvollziehen.
+- **Konsole**: Zeigt Live-Status ("Current Price", "Waiting for next tick...") und Trades.
+- **logs/trading_bot.log**: Detaillierte Aufzeichnungen aller Aktionen.
+- **optimization_results.csv**: Ergebnisse der Parameter-Suche.
 
-## Erweiterung
+## Hinweise
 
-- **Neue Strategien**: Erstelle eine neue Klasse in `trading_bot/strategies/`, die von `Strategy` erbt.
-- **Andere Coins**: Ändere in `main.py` den Parameter `coin_id` (z.B. auf 'ethereum').
-- **Parameter**: Passe das `param_grid` in `main.py` an, um andere Wertebereiche zu testen.
+- Der Live-Modus verwendet *kein echtes Geld*. Es ist eine Simulation mit echten Preisen ("Paper Trading").
+- Die API-Rate-Limits von Coinbase sind zu beachten. Der Standard-Intervall beträgt 60 Sekunden, was sicher ist.
