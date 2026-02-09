@@ -1,22 +1,27 @@
 # Trading Bot Framework
 
-Dies ist ein robustes Framework für einen Trading-Bot, entwickelt, um mit virtuellem Kapital zu handeln, Gebühren zu simulieren und Verluste zu vermeiden.
+Dies ist ein robustes Framework für einen Trading-Bot, entwickelt, um mit virtuellem Kapital zu handeln, Gebühren zu simulieren, Verluste zu vermeiden und automatisch die beste Strategie für aktuelle Marktdaten zu finden.
 
 ## Features
 
-- **Modulare Struktur**: Trennung von Exchange, Portfolio, Strategie und Ausführungs-Engine.
+- **Echte Marktdaten**: Lädt aktuelle Kryptowährungs-Daten (Standard: Bitcoin) von der Coinbase API (oder fällt auf Dummy-Daten zurück).
+- **Strategie-Optimierung**: Testet automatisch verschiedene Parameter (z.B. Gleitende Durchschnitte), um die profitabelste Einstellung für die aktuellen Marktbedingungen zu finden.
 - **Risikomanagement**: Verhindert, dass das Kapital unter Null fällt. Das Portfolio startet mit 100 Einheiten virtuellem Kapital.
 - **Gebühren**: Simuliert realistische Handelsgebühren (Standard 0.1%).
-- **Parallele Strategien**: Unterstützt das gleichzeitige Ausführen mehrerer Strategien zum Vergleich.
-- **Logging**: Detaillierte Aufzeichnungen aller Trades und Fehler in `logs/trading_bot.log`.
+- **Logging & Analyse**:
+    - Detaillierte Logs in `logs/trading_bot.log`.
+    - CSV-Export aller Testergebnisse in `optimization_results.csv`.
 
 ## Installation
 
-Stelle sicher, dass Python installiert ist. Es werden keine externen Bibliotheken für den Kern benötigt, aber `pytest` wird für die Tests empfohlen.
+1. Stelle sicher, dass Python installiert ist.
+2. Installiere die Abhängigkeiten:
 
 ```bash
-pip install pytest
+pip install -r requirements.txt
 ```
+
+*Hinweis: `requests` wird benötigt, um Marktdaten zu laden.*
 
 ## Tests ausführen
 
@@ -27,29 +32,30 @@ export PYTHONPATH=$PYTHONPATH:.
 pytest tests/
 ```
 
-## Simulation starten
+## Bot starten (Optimierung & Simulation)
 
-Um den Bot mit simulierten Marktdaten laufen zu lassen:
+Um den Bot zu starten:
 
 ```bash
 export PYTHONPATH=$PYTHONPATH:.
 python main.py
 ```
 
-Der Bot generiert zufällige Marktdaten und lässt zwei Beispiel-Strategien darauf laufen:
-1. `MA_Strategy_Standard` (Langsamerer gleitender Durchschnitt)
-2. `MA_Strategy_Fast` (Schnellerer gleitender Durchschnitt)
+### Was passiert dann?
+1. **Daten laden**: Der Bot lädt die Bitcoin-Preise der letzten ~12 Tage.
+2. **Optimierung**: Er testet verschiedene Kombinationen von "Short Window" und "Long Window" für die Strategie.
+3. **Ergebnis**: Er wählt die Kombination mit dem höchsten Gewinn.
+4. **Simulation**: Er führt die beste Strategie erneut aus und zeigt detaillierte Informationen zu jedem Trade an.
+5. **Speichern**: Die Ergebnisse aller Tests werden in `optimization_results.csv` gespeichert.
 
-## Ergebnisse & Logs
+## Ergebnisse analysieren
 
-Nach dem Durchlauf findest du eine Zusammenfassung in der Konsole und detaillierte Logs in `logs/trading_bot.log`.
-
-Beispielhafte Ergebnisse aus einem Testlauf:
-- **MA_Strategy_Standard**: Wenig Aktivität, Kapitalerhalt.
-- **MA_Strategy_Fast**: Aggressiverer Handel, potenziell höherer Gewinn (aber auch höheres Risiko).
-
-Die genauen Ergebnisse hängen von den generierten Zufallsdaten ab.
+- **Konsole**: Zeigt den Gewinner und den ROI (Return on Investment) an.
+- **optimization_results.csv**: Öffne diese Datei in Excel oder Google Sheets, um zu sehen, welche Parameter gut oder schlecht funktioniert haben. Das hilft beim "Feinschliff".
+- **logs/trading_bot.log**: Hier kannst du jeden einzelnen Schritt und Trade nachvollziehen.
 
 ## Erweiterung
 
-Neue Strategien können einfach durch Erben von `Strategy` in `trading_bot/strategy.py` erstellt und in `main.py` eingebunden werden.
+- **Neue Strategien**: Erstelle eine neue Klasse in `trading_bot/strategies/`, die von `Strategy` erbt.
+- **Andere Coins**: Ändere in `main.py` den Parameter `coin_id` (z.B. auf 'ethereum').
+- **Parameter**: Passe das `param_grid` in `main.py` an, um andere Wertebereiche zu testen.
