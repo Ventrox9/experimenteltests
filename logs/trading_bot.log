@@ -1,0 +1,510 @@
+2026-02-09 18:21:39,933 INFO exchange __init__ Initialized Exchange: GenericExchange with fee rate: 0.01
+2026-02-09 18:21:39,935 INFO exchange __init__ Initialized Exchange: GenericExchange with fee rate: 0.001
+2026-02-09 18:21:39,935 INFO exchange execute_order EXECUTED BUY: 1.0 BTC/USD @ 10000.0 | Fee: 10.0000 | Total Cost: 10010.0000
+2026-02-09 18:21:39,936 INFO exchange __init__ Initialized Exchange: GenericExchange with fee rate: 0.001
+2026-02-09 18:21:39,936 INFO exchange execute_order EXECUTED SELL: 1.0 BTC/USD @ 10000.0 | Fee: 10.0000 | Total Revenue: 9990.0000
+2026-02-09 18:21:39,937 INFO exchange __init__ Initialized Exchange: GenericExchange with fee rate: 0.001
+2026-02-09 18:21:39,937 ERROR exchange execute_order Invalid order parameters: amount=-1, price=100
+2026-02-09 18:21:39,938 INFO portfolio __init__ Initialized Portfolio with Capital: 100.0
+2026-02-09 18:21:39,939 INFO portfolio __init__ Initialized Portfolio with Capital: 1000.0
+2026-02-09 18:21:39,939 INFO portfolio update Portfolio Updated (BUY): Cash=899.00, BTC/USD=0.1
+2026-02-09 18:21:39,940 INFO portfolio __init__ Initialized Portfolio with Capital: 0.0
+2026-02-09 18:21:39,940 INFO portfolio update Portfolio Updated (SELL): Cash=198.00, BTC/USD=0.3
+2026-02-09 18:21:39,941 INFO portfolio __init__ Initialized Portfolio with Capital: 50.0
+2026-02-09 18:21:39,941 ERROR portfolio update Insufficient funds for BUY: Need 101.0, Have 50.0
+2026-02-09 18:21:39,942 INFO portfolio __init__ Initialized Portfolio with Capital: 100.0
+2026-02-09 18:21:39,942 ERROR portfolio update Insufficient position for SELL: Need 1.0 BTC/USD, Have 0.0
+2026-02-09 18:21:39,943 INFO portfolio __init__ Initialized Portfolio with Capital: 100.0
+2026-02-09 18:23:58,787 INFO main main Initializing Trading Bot Simulation...
+2026-02-09 18:23:58,787 INFO exchange __init__ Initialized Exchange: SimulatedExchange with fee rate: 0.001
+2026-02-09 18:23:58,787 INFO portfolio __init__ Initialized Portfolio with Capital: 100.0
+2026-02-09 18:23:58,787 INFO strategy __init__ Initialized strategy: MA_Strategy_Standard
+2026-02-09 18:23:58,787 INFO portfolio __init__ Initialized Portfolio with Capital: 100.0
+2026-02-09 18:23:58,787 INFO strategy __init__ Initialized strategy: MA_Strategy_Fast
+2026-02-09 18:23:58,787 INFO engine __init__ Initialized Trading Engine with 2 strategies
+2026-02-09 18:23:58,787 INFO main main Generating dummy market data...
+2026-02-09 18:24:20,479 INFO main main Initializing Trading Bot Simulation...
+2026-02-09 18:24:20,480 INFO exchange __init__ Initialized Exchange: SimulatedExchange with fee rate: 0.001
+2026-02-09 18:24:20,480 INFO portfolio __init__ Initialized Portfolio with Capital: 100.0
+2026-02-09 18:24:20,480 INFO strategy __init__ Initialized strategy: MA_Strategy_Standard
+2026-02-09 18:24:20,480 INFO portfolio __init__ Initialized Portfolio with Capital: 100.0
+2026-02-09 18:24:20,480 INFO strategy __init__ Initialized strategy: MA_Strategy_Fast
+2026-02-09 18:24:20,480 INFO engine __init__ Initialized Trading Engine with 2 strategies
+2026-02-09 18:24:20,480 INFO main main Generating dummy market data...
+2026-02-09 18:24:20,480 INFO engine run_backtest Starting Backtest...
+2026-02-09 18:24:20,481 INFO strategy log [MA_Strategy_Fast] Price: 110.25, Short MA: 109.88, Long MA: 106.66
+2026-02-09 18:24:20,481 INFO strategy log [MA_Strategy_Fast] Signal: BUY 0.8617 BTC/USD
+2026-02-09 18:24:20,481 INFO exchange execute_order EXECUTED BUY: 0.8617054802579267 BTC/USD @ 110.24648464759036 | Fee: 0.0950 | Total Cost: 95.0950
+2026-02-09 18:24:20,481 INFO portfolio update Portfolio Updated (BUY): Cash=4.91, BTC/USD=0.8617054802579267
+2026-02-09 18:24:20,481 INFO engine run_step Strategy MA_Strategy_Fast Executed Trade: {'status': 'filled', 'type': 'buy', 'symbol': 'BTC/USD', 'amount': 0.8617054802579267, 'price': 110.24648464759036, 'fee': 0.095, 'total': 95.095}
+2026-02-09 18:24:20,481 INFO strategy log [MA_Strategy_Fast] Price: 108.22, Short MA: 109.59, Long MA: 107.41
+2026-02-09 18:24:20,481 INFO strategy log [MA_Strategy_Fast] Price: 109.01, Short MA: 109.16, Long MA: 108.12
+2026-02-09 18:24:20,481 INFO strategy log [MA_Strategy_Fast] Price: 106.42, Short MA: 107.88, Long MA: 108.37
+2026-02-09 18:24:20,481 INFO strategy log [MA_Strategy_Fast] Signal: SELL 0.8617 BTC/USD
+2026-02-09 18:24:20,481 INFO exchange execute_order EXECUTED SELL: 0.8617054802579267 BTC/USD @ 106.4224602881681 | Fee: 0.0917 | Total Revenue: 91.6131
+2026-02-09 18:24:20,481 INFO portfolio update Portfolio Updated (SELL): Cash=96.52, BTC/USD=0.0
+2026-02-09 18:24:20,481 INFO engine run_step Strategy MA_Strategy_Fast Executed Trade: {'status': 'filled', 'type': 'sell', 'symbol': 'BTC/USD', 'amount': 0.8617054802579267, 'price': 106.4224602881681, 'fee': 0.09170481725284603, 'total': 91.61311243559318}
+2026-02-09 18:24:20,481 INFO strategy log [MA_Strategy_Fast] Price: 105.46, Short MA: 106.97, Long MA: 108.43
+2026-02-09 18:24:20,481 INFO strategy log [MA_Strategy_Fast] Price: 103.03, Short MA: 104.97, Long MA: 107.94
+2026-02-09 18:24:20,481 INFO strategy log [MA_Strategy_Fast] Price: 101.46, Short MA: 103.32, Long MA: 107.34
+2026-02-09 18:24:20,481 INFO strategy log [MA_Strategy_Fast] Price: 99.41, Short MA: 101.30, Long MA: 106.27
+2026-02-09 18:24:20,481 INFO strategy log [MA_Strategy_Fast] Price: 97.64, Short MA: 99.50, Long MA: 105.12
+2026-02-09 18:24:20,481 INFO strategy log [MA_Strategy_Fast] Price: 96.10, Short MA: 97.72, Long MA: 103.70
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Standard] Price: 93.91, Short MA: 97.70, Long MA: 104.36
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Fast] Price: 93.91, Short MA: 95.88, Long MA: 102.07
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Standard] Price: 92.58, Short MA: 95.93, Long MA: 103.96
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Fast] Price: 92.58, Short MA: 94.19, Long MA: 100.50
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Standard] Price: 91.00, Short MA: 94.24, Long MA: 103.41
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Fast] Price: 91.00, Short MA: 92.49, Long MA: 98.70
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Standard] Price: 90.16, Short MA: 92.75, Long MA: 102.72
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Fast] Price: 90.16, Short MA: 91.25, Long MA: 97.07
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Standard] Price: 89.56, Short MA: 91.44, Long MA: 101.96
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Fast] Price: 89.56, Short MA: 90.24, Long MA: 95.48
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Standard] Price: 90.31, Short MA: 90.72, Long MA: 101.08
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Fast] Price: 90.31, Short MA: 90.01, Long MA: 94.21
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Standard] Price: 91.12, Short MA: 90.43, Long MA: 100.26
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Fast] Price: 91.12, Short MA: 90.33, Long MA: 93.18
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Standard] Price: 90.31, Short MA: 90.29, Long MA: 99.27
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Fast] Price: 90.31, Short MA: 90.58, Long MA: 92.27
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Standard] Price: 91.55, Short MA: 90.57, Long MA: 98.39
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Fast] Price: 91.55, Short MA: 90.99, Long MA: 91.66
+2026-02-09 18:24:20,482 INFO strategy log [MA_Strategy_Standard] Price: 93.17, Short MA: 91.29, Long MA: 97.53
+2026-02-09 18:24:20,483 INFO strategy log [MA_Strategy_Fast] Price: 93.17, Short MA: 91.68, Long MA: 91.37
+2026-02-09 18:24:20,483 INFO strategy log [MA_Strategy_Fast] Signal: BUY 0.9841 BTC/USD
+2026-02-09 18:24:20,483 INFO exchange execute_order EXECUTED BUY: 0.9841422616202369 BTC/USD @ 93.16966701831967 | Fee: 0.0917 | Total Cost: 91.7839
+2026-02-09 18:24:20,483 INFO portfolio update Portfolio Updated (BUY): Cash=4.73, BTC/USD=0.9841422616202369
+2026-02-09 18:24:20,483 INFO engine run_step Strategy MA_Strategy_Fast Executed Trade: {'status': 'filled', 'type': 'buy', 'symbol': 'BTC/USD', 'amount': 0.9841422616202369, 'price': 93.16966701831967, 'fee': 0.09169220681381351, 'total': 91.78389902062733}
+2026-02-09 18:24:20,483 INFO strategy log [MA_Strategy_Standard] Price: 95.64, Short MA: 92.36, Long MA: 96.80
+2026-02-09 18:24:20,483 INFO strategy log [MA_Strategy_Fast] Price: 95.64, Short MA: 93.45, Long MA: 91.54
+2026-02-09 18:24:20,483 INFO strategy log [MA_Strategy_Standard] Price: 97.22, Short MA: 93.58, Long MA: 96.25
+2026-02-09 18:24:20,483 INFO strategy log [MA_Strategy_Fast] Price: 97.22, Short MA: 95.34, Long MA: 92.01
+2026-02-09 18:24:20,483 INFO strategy log [MA_Strategy_Standard] Price: 99.63, Short MA: 95.44, Long MA: 95.78
+2026-02-09 18:24:20,483 INFO strategy log [MA_Strategy_Fast] Price: 99.63, Short MA: 97.50, Long MA: 92.87
+2026-02-09 18:24:20,483 INFO strategy log [MA_Strategy_Standard] Price: 101.90, Short MA: 97.51, Long MA: 95.56
+2026-02-09 18:24:20,483 INFO strategy log [MA_Strategy_Standard] Signal: BUY 0.9323 BTC/USD
+2026-02-09 18:24:20,483 INFO exchange execute_order EXECUTED BUY: 0.9323001603960455 BTC/USD @ 101.8985129849635 | Fee: 0.0950 | Total Cost: 95.0950
+2026-02-09 18:24:20,483 INFO portfolio update Portfolio Updated (BUY): Cash=4.91, BTC/USD=0.9323001603960455
+2026-02-09 18:24:20,483 INFO engine run_step Strategy MA_Strategy_Standard Executed Trade: {'status': 'filled', 'type': 'buy', 'symbol': 'BTC/USD', 'amount': 0.9323001603960455, 'price': 101.8985129849635, 'fee': 0.095, 'total': 95.095}
+2026-02-09 18:24:20,483 INFO strategy log [MA_Strategy_Fast] Price: 101.90, Short MA: 99.58, Long MA: 94.04
+2026-02-09 18:24:20,483 INFO strategy log [MA_Strategy_Standard] Price: 103.79, Short MA: 99.64, Long MA: 95.47
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Fast] Price: 103.79, Short MA: 101.77, Long MA: 95.46
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Standard] Price: 104.82, Short MA: 101.47, Long MA: 95.56
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Fast] Price: 104.82, Short MA: 103.51, Long MA: 96.92
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Standard] Price: 106.13, Short MA: 103.25, Long MA: 95.80
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Fast] Price: 106.13, Short MA: 104.91, Long MA: 98.42
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Standard] Price: 108.28, Short MA: 104.98, Long MA: 96.24
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Fast] Price: 108.28, Short MA: 106.41, Long MA: 100.21
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Standard] Price: 109.57, Short MA: 106.52, Long MA: 96.84
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Fast] Price: 109.57, Short MA: 107.99, Long MA: 102.02
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Standard] Price: 109.93, Short MA: 107.75, Long MA: 97.53
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Fast] Price: 109.93, Short MA: 109.26, Long MA: 103.69
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Standard] Price: 109.25, Short MA: 108.63, Long MA: 98.30
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Fast] Price: 109.25, Short MA: 109.59, Long MA: 105.05
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Standard] Price: 110.42, Short MA: 109.49, Long MA: 99.19
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Fast] Price: 110.42, Short MA: 109.87, Long MA: 106.37
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Standard] Price: 109.26, Short MA: 109.69, Long MA: 100.10
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Fast] Price: 109.26, Short MA: 109.64, Long MA: 107.34
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Standard] Price: 108.74, Short MA: 109.52, Long MA: 101.03
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Fast] Price: 108.74, Short MA: 109.47, Long MA: 108.02
+2026-02-09 18:24:20,484 INFO strategy log [MA_Strategy_Standard] Price: 106.67, Short MA: 108.87, Long MA: 101.89
+2026-02-09 18:24:20,485 INFO strategy log [MA_Strategy_Fast] Price: 106.67, Short MA: 108.22, Long MA: 108.31
+2026-02-09 18:24:20,485 INFO strategy log [MA_Strategy_Fast] Signal: SELL 0.9841 BTC/USD
+2026-02-09 18:24:20,485 INFO exchange execute_order EXECUTED SELL: 0.9841422616202369 BTC/USD @ 106.67293815823298 | Fee: 0.1050 | Total Revenue: 104.8764
+2026-02-09 18:24:20,485 INFO portfolio update Portfolio Updated (SELL): Cash=109.61, BTC/USD=0.0
+2026-02-09 18:24:20,485 INFO engine run_step Strategy MA_Strategy_Fast Executed Trade: {'status': 'filled', 'type': 'sell', 'symbol': 'BTC/USD', 'amount': 0.9841422616202369, 'price': 106.67293815823298, 'fee': 0.10498134661271907, 'total': 104.87636526610635}
+2026-02-09 18:24:20,485 INFO strategy log [MA_Strategy_Standard] Price: 106.24, Short MA: 108.27, Long MA: 102.68
+2026-02-09 18:24:20,485 INFO strategy log [MA_Strategy_Fast] Price: 106.24, Short MA: 107.22, Long MA: 108.45
+2026-02-09 18:24:20,485 INFO strategy log [MA_Strategy_Standard] Price: 103.41, Short MA: 106.86, Long MA: 103.30
+2026-02-09 18:24:20,485 INFO strategy log [MA_Strategy_Fast] Price: 103.41, Short MA: 105.44, Long MA: 108.18
+2026-02-09 18:24:20,485 INFO strategy log [MA_Strategy_Standard] Price: 102.84, Short MA: 105.58, Long MA: 103.92
+2026-02-09 18:24:20,485 INFO strategy log [MA_Strategy_Fast] Price: 102.84, Short MA: 104.16, Long MA: 107.63
+2026-02-09 18:24:20,485 INFO strategy log [MA_Strategy_Standard] Price: 99.92, Short MA: 103.82, Long MA: 104.34
+2026-02-09 18:24:20,485 INFO strategy log [MA_Strategy_Standard] Signal: SELL 0.9323 BTC/USD
+2026-02-09 18:24:20,485 INFO exchange execute_order EXECUTED SELL: 0.9323001603960455 BTC/USD @ 99.92255566024131 | Fee: 0.0932 | Total Revenue: 93.0647
+2026-02-09 18:24:20,485 INFO portfolio update Portfolio Updated (SELL): Cash=97.97, BTC/USD=0.0
+2026-02-09 18:24:20,485 INFO engine run_step Strategy MA_Strategy_Standard Executed Trade: {'status': 'filled', 'type': 'sell', 'symbol': 'BTC/USD', 'amount': 0.9323001603960455, 'price': 99.92255566024131, 'fee': 0.09315781466922576, 'total': 93.06465685455653}
+2026-02-09 18:24:20,485 INFO strategy log [MA_Strategy_Fast] Price: 99.92, Short MA: 102.06, Long MA: 106.67
+2026-02-09 18:24:20,485 INFO strategy log [MA_Strategy_Standard] Price: 98.87, Short MA: 102.26, Long MA: 104.63
+2026-02-09 18:24:20,485 INFO strategy log [MA_Strategy_Fast] Price: 98.87, Short MA: 100.54, Long MA: 105.56
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Standard] Price: 96.98, Short MA: 100.40, Long MA: 104.69
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Fast] Price: 96.98, Short MA: 98.59, Long MA: 104.33
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Standard] Price: 95.05, Short MA: 98.73, Long MA: 104.59
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Fast] Price: 95.05, Short MA: 96.97, Long MA: 102.80
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Standard] Price: 94.00, Short MA: 96.96, Long MA: 104.30
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Fast] Price: 94.00, Short MA: 95.34, Long MA: 101.27
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Standard] Price: 91.94, Short MA: 95.37, Long MA: 103.81
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Fast] Price: 91.94, Short MA: 93.66, Long MA: 99.59
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Standard] Price: 91.20, Short MA: 93.83, Long MA: 103.18
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Fast] Price: 91.20, Short MA: 92.38, Long MA: 98.04
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Standard] Price: 89.44, Short MA: 92.33, Long MA: 102.41
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Fast] Price: 89.44, Short MA: 90.86, Long MA: 96.36
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Standard] Price: 90.02, Short MA: 91.32, Long MA: 101.60
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Fast] Price: 90.02, Short MA: 90.22, Long MA: 95.03
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Standard] Price: 91.12, Short MA: 90.74, Long MA: 100.74
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Fast] Price: 91.12, Short MA: 90.20, Long MA: 93.85
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Standard] Price: 91.21, Short MA: 90.60, Long MA: 99.83
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Fast] Price: 91.21, Short MA: 90.78, Long MA: 92.98
+2026-02-09 18:24:20,486 INFO strategy log [MA_Strategy_Standard] Price: 91.65, Short MA: 90.69, Long MA: 98.91
+2026-02-09 18:24:20,487 INFO strategy log [MA_Strategy_Fast] Price: 91.65, Short MA: 91.33, Long MA: 92.26
+2026-02-09 18:24:20,487 INFO strategy log [MA_Strategy_Standard] Price: 93.48, Short MA: 91.50, Long MA: 98.12
+2026-02-09 18:24:20,487 INFO strategy log [MA_Strategy_Fast] Price: 93.48, Short MA: 92.11, Long MA: 91.91
+2026-02-09 18:24:20,487 INFO strategy log [MA_Strategy_Fast] Signal: BUY 1.1139 BTC/USD
+2026-02-09 18:24:20,487 INFO exchange execute_order EXECUTED BUY: 1.113923373559562 BTC/USD @ 93.48044238830285 | Fee: 0.1041 | Total Cost: 104.2342
+2026-02-09 18:24:20,487 INFO portfolio update Portfolio Updated (BUY): Cash=5.38, BTC/USD=1.113923373559562
+2026-02-09 18:24:20,487 INFO engine run_step Strategy MA_Strategy_Fast Executed Trade: {'status': 'filled', 'type': 'buy', 'symbol': 'BTC/USD', 'amount': 1.113923373559562, 'price': 93.48044238830285, 'fee': 0.10413004974701859, 'total': 104.2341797967656}
+2026-02-09 18:24:20,487 INFO strategy log [MA_Strategy_Standard] Price: 95.35, Short MA: 92.56, Long MA: 97.37
+2026-02-09 18:24:20,487 INFO strategy log [MA_Strategy_Fast] Price: 95.35, Short MA: 93.49, Long MA: 91.94
+2026-02-09 18:24:20,487 INFO strategy log [MA_Strategy_Standard] Price: 96.02, Short MA: 93.54, Long MA: 96.71
+2026-02-09 18:24:20,487 INFO strategy log [MA_Strategy_Fast] Price: 96.02, Short MA: 94.95, Long MA: 92.14
+2026-02-09 18:24:20,487 INFO strategy log [MA_Strategy_Standard] Price: 98.07, Short MA: 94.91, Long MA: 96.17
+2026-02-09 18:24:20,487 INFO strategy log [MA_Strategy_Fast] Price: 98.07, Short MA: 96.48, Long MA: 92.76
+2026-02-09 18:24:20,487 INFO strategy log [MA_Strategy_Standard] Price: 101.08, Short MA: 96.80, Long MA: 95.89
+2026-02-09 18:24:20,487 INFO strategy log [MA_Strategy_Standard] Signal: BUY 0.9208 BTC/USD
+2026-02-09 18:24:20,487 INFO exchange execute_order EXECUTED BUY: 0.9207955939712481 BTC/USD @ 101.07691068592891 | Fee: 0.0931 | Total Cost: 93.1642
+2026-02-09 18:24:20,487 INFO portfolio update Portfolio Updated (BUY): Cash=4.81, BTC/USD=0.9207955939712481
+2026-02-09 18:24:20,487 INFO engine run_step Strategy MA_Strategy_Standard Executed Trade: {'status': 'filled', 'type': 'buy', 'symbol': 'BTC/USD', 'amount': 0.9207955939712481, 'price': 101.07691068592891, 'fee': 0.09307117401182871, 'total': 93.16424518584053}
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Fast] Price: 101.08, Short MA: 98.39, Long MA: 93.74
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Standard] Price: 103.27, Short MA: 98.76, Long MA: 95.75
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Fast] Price: 103.27, Short MA: 100.80, Long MA: 95.13
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Standard] Price: 104.56, Short MA: 100.60, Long MA: 95.80
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Fast] Price: 104.56, Short MA: 102.97, Long MA: 96.58
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Standard] Price: 106.39, Short MA: 102.67, Long MA: 95.98
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Fast] Price: 106.39, Short MA: 104.74, Long MA: 98.11
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Standard] Price: 106.42, Short MA: 104.34, Long MA: 96.31
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Fast] Price: 106.42, Short MA: 105.79, Long MA: 99.63
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Standard] Price: 109.09, Short MA: 105.95, Long MA: 96.82
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Fast] Price: 109.09, Short MA: 107.30, Long MA: 101.37
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Standard] Price: 109.99, Short MA: 107.29, Long MA: 97.47
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Fast] Price: 109.99, Short MA: 108.50, Long MA: 103.02
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Standard] Price: 109.09, Short MA: 108.20, Long MA: 98.17
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Fast] Price: 109.09, Short MA: 109.39, Long MA: 104.40
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Standard] Price: 109.66, Short MA: 108.85, Long MA: 98.95
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Fast] Price: 109.66, Short MA: 109.58, Long MA: 105.76
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Standard] Price: 110.27, Short MA: 109.62, Long MA: 99.87
+2026-02-09 18:24:20,488 INFO strategy log [MA_Strategy_Fast] Price: 110.27, Short MA: 109.67, Long MA: 106.98
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Standard] Price: 109.75, Short MA: 109.75, Long MA: 100.80
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Fast] Price: 109.75, Short MA: 109.89, Long MA: 107.85
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Standard] Price: 108.12, Short MA: 109.38, Long MA: 101.73
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Fast] Price: 108.12, Short MA: 109.38, Long MA: 108.33
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Standard] Price: 106.70, Short MA: 108.90, Long MA: 102.56
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Fast] Price: 106.70, Short MA: 108.19, Long MA: 108.55
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Fast] Signal: SELL 1.1139 BTC/USD
+2026-02-09 18:24:20,489 INFO exchange execute_order EXECUTED SELL: 1.113923373559562 BTC/USD @ 106.70110884130632 | Fee: 0.1189 | Total Revenue: 118.7380
+2026-02-09 18:24:20,489 INFO portfolio update Portfolio Updated (SELL): Cash=124.11, BTC/USD=0.0
+2026-02-09 18:24:20,489 INFO engine run_step Strategy MA_Strategy_Fast Executed Trade: {'status': 'filled', 'type': 'sell', 'symbol': 'BTC/USD', 'amount': 1.113923373559562, 'price': 106.70110884130632, 'fee': 0.11885685912305394, 'total': 118.73800226393088}
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Standard] Price: 105.14, Short MA: 108.00, Long MA: 103.27
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Fast] Price: 105.14, Short MA: 106.65, Long MA: 108.42
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Standard] Price: 103.39, Short MA: 106.62, Long MA: 103.87
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Fast] Price: 103.39, Short MA: 105.08, Long MA: 108.12
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Standard] Price: 101.34, Short MA: 104.94, Long MA: 104.36
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Fast] Price: 101.34, Short MA: 103.29, Long MA: 107.34
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Standard] Price: 99.67, Short MA: 103.25, Long MA: 104.67
+2026-02-09 18:24:20,489 INFO strategy log [MA_Strategy_Standard] Signal: SELL 0.9208 BTC/USD
+2026-02-09 18:24:20,489 INFO exchange execute_order EXECUTED SELL: 0.9207955939712481 BTC/USD @ 99.67459389390432 | Fee: 0.0918 | Total Revenue: 91.6881
+2026-02-09 18:24:20,489 INFO portfolio update Portfolio Updated (SELL): Cash=96.49, BTC/USD=0.0
+2026-02-09 18:24:20,490 INFO engine run_step Strategy MA_Strategy_Standard Executed Trade: {'status': 'filled', 'type': 'sell', 'symbol': 'BTC/USD', 'amount': 0.9207955939712481, 'price': 99.67459389390432, 'fee': 0.09177992688838056, 'total': 91.68814696149218}
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Fast] Price: 99.67, Short MA: 101.47, Long MA: 106.31
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Standard] Price: 97.06, Short MA: 101.32, Long MA: 104.75
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Fast] Price: 97.06, Short MA: 99.36, Long MA: 105.11
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Standard] Price: 95.00, Short MA: 99.29, Long MA: 104.70
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Fast] Price: 95.00, Short MA: 97.24, Long MA: 103.64
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Standard] Price: 93.24, Short MA: 97.26, Long MA: 104.46
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Fast] Price: 93.24, Short MA: 95.10, Long MA: 101.94
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Standard] Price: 91.39, Short MA: 95.27, Long MA: 103.98
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Fast] Price: 91.39, Short MA: 93.21, Long MA: 100.10
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Standard] Price: 91.60, Short MA: 93.66, Long MA: 103.39
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Fast] Price: 91.60, Short MA: 92.08, Long MA: 98.45
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Standard] Price: 91.07, Short MA: 92.46, Long MA: 102.72
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Fast] Price: 91.07, Short MA: 91.35, Long MA: 96.89
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Standard] Price: 90.74, Short MA: 91.61, Long MA: 101.94
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Fast] Price: 90.74, Short MA: 91.13, Long MA: 95.45
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Standard] Price: 91.03, Short MA: 91.16, Long MA: 101.17
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Fast] Price: 91.03, Short MA: 90.94, Long MA: 94.21
+2026-02-09 18:24:20,490 INFO strategy log [MA_Strategy_Standard] Price: 91.32, Short MA: 91.15, Long MA: 100.28
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Fast] Price: 91.32, Short MA: 91.03, Long MA: 93.21
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Standard] Price: 90.66, Short MA: 90.96, Long MA: 99.31
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Fast] Price: 90.66, Short MA: 91.00, Long MA: 92.31
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Standard] Price: 92.75, Short MA: 91.30, Long MA: 98.49
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Fast] Price: 92.75, Short MA: 91.57, Long MA: 91.88
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Standard] Price: 93.27, Short MA: 91.80, Long MA: 97.67
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Fast] Price: 93.27, Short MA: 92.22, Long MA: 91.70
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Fast] Signal: BUY 1.2642 BTC/USD
+2026-02-09 18:24:20,491 INFO exchange execute_order EXECUTED BUY: 1.2641782138656394 BTC/USD @ 93.26903422127576 | Fee: 0.1179 | Total Cost: 118.0266
+2026-02-09 18:24:20,491 INFO portfolio update Portfolio Updated (BUY): Cash=6.09, BTC/USD=1.2641782138656394
+2026-02-09 18:24:20,491 INFO engine run_step Strategy MA_Strategy_Fast Executed Trade: {'status': 'filled', 'type': 'buy', 'symbol': 'BTC/USD', 'amount': 1.2641782138656394, 'price': 93.26903422127576, 'fee': 0.1179086810908256, 'total': 118.02658977191642}
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Standard] Price: 94.97, Short MA: 92.59, Long MA: 96.91
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Fast] Price: 94.97, Short MA: 93.66, Long MA: 91.88
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Standard] Price: 96.66, Short MA: 93.66, Long MA: 96.26
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Fast] Price: 96.66, Short MA: 94.97, Long MA: 92.41
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Standard] Price: 99.98, Short MA: 95.53, Long MA: 95.85
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Fast] Price: 99.98, Short MA: 97.21, Long MA: 93.24
+2026-02-09 18:24:20,491 INFO strategy log [MA_Strategy_Standard] Price: 102.20, Short MA: 97.42, Long MA: 95.62
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Standard] Signal: BUY 0.8970 BTC/USD
+2026-02-09 18:24:20,492 INFO exchange execute_order EXECUTED BUY: 0.8969776774824703 BTC/USD @ 102.19750502151071 | Fee: 0.0917 | Total Cost: 91.7605
+2026-02-09 18:24:20,492 INFO portfolio update Portfolio Updated (BUY): Cash=4.73, BTC/USD=0.8969776774824703
+2026-02-09 18:24:20,492 INFO engine run_step Strategy MA_Strategy_Standard Executed Trade: {'status': 'filled', 'type': 'buy', 'symbol': 'BTC/USD', 'amount': 0.8969776774824703, 'price': 102.19750502151071, 'fee': 0.09166888069869776, 'total': 91.76054957939645}
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Fast] Price: 102.20, Short MA: 99.61, Long MA: 94.36
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Standard] Price: 103.58, Short MA: 99.48, Long MA: 95.55
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Fast] Price: 103.58, Short MA: 101.92, Long MA: 95.64
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Standard] Price: 106.09, Short MA: 101.70, Long MA: 95.68
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Fast] Price: 106.09, Short MA: 103.96, Long MA: 97.15
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Standard] Price: 105.91, Short MA: 103.55, Long MA: 95.91
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Fast] Price: 105.91, Short MA: 105.20, Long MA: 98.61
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Standard] Price: 107.87, Short MA: 105.13, Long MA: 96.32
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Fast] Price: 107.87, Short MA: 106.62, Long MA: 100.33
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Standard] Price: 109.47, Short MA: 106.59, Long MA: 96.94
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Fast] Price: 109.47, Short MA: 107.75, Long MA: 102.00
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Standard] Price: 110.55, Short MA: 107.98, Long MA: 97.72
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Fast] Price: 110.55, Short MA: 109.30, Long MA: 103.73
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Standard] Price: 110.70, Short MA: 108.90, Long MA: 98.59
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Fast] Price: 110.70, Short MA: 110.24, Long MA: 105.30
+2026-02-09 18:24:20,492 INFO strategy log [MA_Strategy_Standard] Price: 109.93, Short MA: 109.70, Long MA: 99.52
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Fast] Price: 109.93, Short MA: 110.39, Long MA: 106.63
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Standard] Price: 108.45, Short MA: 109.82, Long MA: 100.36
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Fast] Price: 108.45, Short MA: 109.69, Long MA: 107.48
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Standard] Price: 108.80, Short MA: 109.68, Long MA: 101.25
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Fast] Price: 108.80, Short MA: 109.06, Long MA: 108.14
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Standard] Price: 107.88, Short MA: 109.15, Long MA: 102.10
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Fast] Price: 107.88, Short MA: 108.38, Long MA: 108.57
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Fast] Signal: SELL 1.2642 BTC/USD
+2026-02-09 18:24:20,493 INFO exchange execute_order EXECUTED SELL: 1.2641782138656394 BTC/USD @ 107.8817474180534 | Fee: 0.1364 | Total Revenue: 136.2454
+2026-02-09 18:24:20,493 INFO portfolio update Portfolio Updated (SELL): Cash=142.33, BTC/USD=0.0
+2026-02-09 18:24:20,493 INFO engine run_step Strategy MA_Strategy_Fast Executed Trade: {'status': 'filled', 'type': 'sell', 'symbol': 'BTC/USD', 'amount': 1.2641782138656394, 'price': 107.8817474180534, 'fee': 0.1363817547596588, 'total': 136.24537300489914}
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Standard] Price: 106.17, Short MA: 108.25, Long MA: 102.86
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Fast] Price: 106.17, Short MA: 107.62, Long MA: 108.57
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Standard] Price: 102.94, Short MA: 106.85, Long MA: 103.44
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Fast] Price: 102.94, Short MA: 105.67, Long MA: 108.28
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Standard] Price: 101.46, Short MA: 105.45, Long MA: 103.98
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Fast] Price: 101.46, Short MA: 103.53, Long MA: 107.64
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Standard] Price: 100.72, Short MA: 103.84, Long MA: 104.38
+2026-02-09 18:24:20,493 INFO strategy log [MA_Strategy_Standard] Signal: SELL 0.8970 BTC/USD
+2026-02-09 18:24:20,494 INFO exchange execute_order EXECUTED SELL: 0.8969776774824703 BTC/USD @ 100.71883210962177 | Fee: 0.0903 | Total Revenue: 90.2522
+2026-02-09 18:24:20,494 INFO portfolio update Portfolio Updated (SELL): Cash=94.99, BTC/USD=0.0
+2026-02-09 18:24:20,494 INFO engine run_step Strategy MA_Strategy_Standard Executed Trade: {'status': 'filled', 'type': 'sell', 'symbol': 'BTC/USD', 'amount': 0.8969776774824703, 'price': 100.71883210962177, 'fee': 0.09034254410443539, 'total': 90.25220156033096}
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Fast] Price: 100.72, Short MA: 101.71, Long MA: 106.76
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Standard] Price: 97.00, Short MA: 101.66, Long MA: 104.57
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Fast] Price: 97.00, Short MA: 99.73, Long MA: 105.41
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Standard] Price: 96.88, Short MA: 99.80, Long MA: 104.66
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Fast] Price: 96.88, Short MA: 98.20, Long MA: 104.02
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Standard] Price: 94.70, Short MA: 98.15, Long MA: 104.56
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Fast] Price: 94.70, Short MA: 96.19, Long MA: 102.50
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Standard] Price: 92.74, Short MA: 96.41, Long MA: 104.20
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Fast] Price: 92.74, Short MA: 94.77, Long MA: 100.93
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Standard] Price: 90.98, Short MA: 94.46, Long MA: 103.64
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Fast] Price: 90.98, Short MA: 92.80, Long MA: 99.15
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Standard] Price: 90.53, Short MA: 93.16, Long MA: 102.99
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Fast] Price: 90.53, Short MA: 91.41, Long MA: 97.41
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Standard] Price: 90.31, Short MA: 91.85, Long MA: 102.20
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Fast] Price: 90.31, Short MA: 90.61, Long MA: 95.83
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Standard] Price: 90.84, Short MA: 91.08, Long MA: 101.45
+2026-02-09 18:24:20,494 INFO strategy log [MA_Strategy_Fast] Price: 90.84, Short MA: 90.56, Long MA: 94.62
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Standard] Price: 89.44, Short MA: 90.42, Long MA: 100.52
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Fast] Price: 89.44, Short MA: 90.20, Long MA: 93.41
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Standard] Price: 90.45, Short MA: 90.31, Long MA: 99.57
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Fast] Price: 90.45, Short MA: 90.24, Long MA: 92.39
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Standard] Price: 92.38, Short MA: 90.69, Long MA: 98.67
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Fast] Price: 92.38, Short MA: 90.76, Long MA: 91.92
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Standard] Price: 93.95, Short MA: 91.41, Long MA: 97.83
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Fast] Price: 93.95, Short MA: 92.26, Long MA: 91.63
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Fast] Signal: BUY 1.4392 BTC/USD
+2026-02-09 18:24:20,495 INFO exchange execute_order EXECUTED BUY: 1.4392149159388492 BTC/USD @ 93.95158684410437 | Fee: 0.1352 | Total Cost: 135.3517
+2026-02-09 18:24:20,495 INFO portfolio update Portfolio Updated (BUY): Cash=6.98, BTC/USD=1.4392149159388492
+2026-02-09 18:24:20,495 INFO engine run_step Strategy MA_Strategy_Fast Executed Trade: {'status': 'filled', 'type': 'buy', 'symbol': 'BTC/USD', 'amount': 1.4392149159388492, 'price': 93.95158684410437, 'fee': 0.13521652516215918, 'total': 135.35174168732132}
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Standard] Price: 95.83, Short MA: 92.41, Long MA: 97.12
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Fast] Price: 95.83, Short MA: 94.06, Long MA: 91.75
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Standard] Price: 96.53, Short MA: 93.83, Long MA: 96.53
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Fast] Price: 96.53, Short MA: 95.44, Long MA: 92.12
+2026-02-09 18:24:20,495 INFO strategy log [MA_Strategy_Standard] Price: 97.81, Short MA: 95.30, Long MA: 95.98
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Fast] Price: 97.81, Short MA: 96.72, Long MA: 92.81
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Standard] Price: 101.29, Short MA: 97.08, Long MA: 95.65
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Standard] Signal: BUY 0.8908 BTC/USD
+2026-02-09 18:24:20,496 INFO exchange execute_order EXECUTED BUY: 0.8908374158007499 BTC/USD @ 101.29339931178673 | Fee: 0.0902 | Total Cost: 90.3262
+2026-02-09 18:24:20,496 INFO portfolio update Portfolio Updated (BUY): Cash=4.66, BTC/USD=0.8908374158007499
+2026-02-09 18:24:20,496 INFO engine run_step Strategy MA_Strategy_Standard Executed Trade: {'status': 'filled', 'type': 'buy', 'symbol': 'BTC/USD', 'amount': 0.8908374158007499, 'price': 101.29339931178673, 'fee': 0.09023595008058556, 'total': 90.32618603066614}
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Fast] Price: 101.29, Short MA: 98.54, Long MA: 93.88
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Standard] Price: 102.17, Short MA: 98.73, Long MA: 95.45
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Fast] Price: 102.17, Short MA: 100.42, Long MA: 95.07
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Standard] Price: 105.21, Short MA: 100.60, Long MA: 95.56
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Fast] Price: 105.21, Short MA: 102.89, Long MA: 96.51
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Standard] Price: 107.04, Short MA: 102.70, Long MA: 95.84
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Fast] Price: 107.04, Short MA: 104.80, Long MA: 98.27
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Standard] Price: 108.37, Short MA: 104.81, Long MA: 96.22
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Fast] Price: 108.37, Short MA: 106.87, Long MA: 100.06
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Standard] Price: 108.18, Short MA: 106.19, Long MA: 96.78
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Fast] Price: 108.18, Short MA: 107.86, Long MA: 101.64
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Standard] Price: 110.45, Short MA: 107.85, Long MA: 97.46
+2026-02-09 18:24:20,496 INFO strategy log [MA_Strategy_Fast] Price: 110.45, Short MA: 109.00, Long MA: 103.29
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Standard] Price: 109.93, Short MA: 108.79, Long MA: 98.22
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Fast] Price: 109.93, Short MA: 109.52, Long MA: 104.70
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Standard] Price: 109.81, Short MA: 109.35, Long MA: 99.08
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Fast] Price: 109.81, Short MA: 110.07, Long MA: 106.03
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Standard] Price: 109.86, Short MA: 109.65, Long MA: 100.02
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Fast] Price: 109.86, Short MA: 109.87, Long MA: 107.23
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Standard] Price: 109.40, Short MA: 109.89, Long MA: 100.96
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Fast] Price: 109.40, Short MA: 109.69, Long MA: 108.04
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Standard] Price: 106.77, Short MA: 109.16, Long MA: 101.79
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Fast] Price: 106.77, Short MA: 108.68, Long MA: 108.50
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Standard] Price: 106.87, Short MA: 108.54, Long MA: 102.59
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Fast] Price: 106.87, Short MA: 107.68, Long MA: 108.67
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Fast] Signal: SELL 1.4392 BTC/USD
+2026-02-09 18:24:20,497 INFO exchange execute_order EXECUTED SELL: 1.4392149159388492 BTC/USD @ 106.86836214624357 | Fee: 0.1538 | Total Revenue: 153.6527
+2026-02-09 18:24:20,497 INFO portfolio update Portfolio Updated (SELL): Cash=160.63, BTC/USD=0.0
+2026-02-09 18:24:20,497 INFO engine run_step Strategy MA_Strategy_Fast Executed Trade: {'status': 'filled', 'type': 'sell', 'symbol': 'BTC/USD', 'amount': 1.4392149159388492, 'price': 106.86836214624357, 'fee': 0.15380654084282844, 'total': 153.65273430198562}
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Standard] Price: 105.03, Short MA: 107.59, Long MA: 103.37
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Fast] Price: 105.03, Short MA: 106.23, Long MA: 108.47
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Standard] Price: 103.32, Short MA: 106.28, Long MA: 104.01
+2026-02-09 18:24:20,497 INFO strategy log [MA_Strategy_Fast] Price: 103.32, Short MA: 105.07, Long MA: 107.96
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Standard] Price: 101.33, Short MA: 104.67, Long MA: 104.46
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Fast] Price: 101.33, Short MA: 103.23, Long MA: 107.28
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Standard] Price: 98.22, Short MA: 102.96, Long MA: 104.67
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Standard] Signal: SELL 0.8908 BTC/USD
+2026-02-09 18:24:20,498 INFO exchange execute_order EXECUTED SELL: 0.8908374158007499 BTC/USD @ 98.22025944944666 | Fee: 0.0875 | Total Revenue: 87.4108
+2026-02-09 18:24:20,498 INFO portfolio update Portfolio Updated (SELL): Cash=92.07, BTC/USD=0.0
+2026-02-09 18:24:20,498 INFO engine run_step Strategy MA_Strategy_Standard Executed Trade: {'status': 'filled', 'type': 'sell', 'symbol': 'BTC/USD', 'amount': 0.8908374158007499, 'price': 98.22025944944666, 'fee': 0.08749828210722425, 'total': 87.41078382511704}
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Fast] Price: 98.22, Short MA: 100.96, Long MA: 106.06
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Standard] Price: 96.43, Short MA: 100.87, Long MA: 104.70
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Fast] Price: 96.43, Short MA: 98.66, Long MA: 104.71
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Standard] Price: 95.17, Short MA: 98.90, Long MA: 104.63
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Fast] Price: 95.17, Short MA: 96.61, Long MA: 103.24
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Standard] Price: 92.83, Short MA: 96.80, Long MA: 104.39
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Fast] Price: 92.83, Short MA: 94.81, Long MA: 101.54
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Standard] Price: 91.65, Short MA: 94.86, Long MA: 103.90
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Fast] Price: 91.65, Short MA: 93.22, Long MA: 99.76
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Standard] Price: 90.76, Short MA: 93.37, Long MA: 103.33
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Fast] Price: 90.76, Short MA: 91.75, Long MA: 98.16
+2026-02-09 18:24:20,498 INFO strategy log [MA_Strategy_Standard] Price: 89.60, Short MA: 92.00, Long MA: 102.55
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Fast] Price: 89.60, Short MA: 90.67, Long MA: 96.43
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Standard] Price: 90.00, Short MA: 90.97, Long MA: 101.70
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Fast] Price: 90.00, Short MA: 90.12, Long MA: 94.93
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Standard] Price: 90.02, Short MA: 90.40, Long MA: 100.78
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Fast] Price: 90.02, Short MA: 89.87, Long MA: 93.60
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Standard] Price: 90.39, Short MA: 90.15, Long MA: 99.89
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Fast] Price: 90.39, Short MA: 90.14, Long MA: 92.51
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Standard] Price: 91.94, Short MA: 90.39, Long MA: 98.97
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Fast] Price: 91.94, Short MA: 90.78, Long MA: 91.88
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Standard] Price: 93.68, Short MA: 91.21, Long MA: 98.15
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Fast] Price: 93.68, Short MA: 92.00, Long MA: 91.60
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Fast] Signal: BUY 1.6289 BTC/USD
+2026-02-09 18:24:20,499 INFO exchange execute_order EXECUTED BUY: 1.628933438353982 BTC/USD @ 93.682445551792 | Fee: 0.1526 | Total Cost: 152.7551
+2026-02-09 18:24:20,499 INFO portfolio update Portfolio Updated (BUY): Cash=7.88, BTC/USD=1.628933438353982
+2026-02-09 18:24:20,499 INFO engine run_step Strategy MA_Strategy_Fast Executed Trade: {'status': 'filled', 'type': 'buy', 'symbol': 'BTC/USD', 'amount': 1.628933438353982, 'price': 93.682445551792, 'fee': 0.15260246814609024, 'total': 152.75507061423633}
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Standard] Price: 95.06, Short MA: 92.22, Long MA: 97.42
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Fast] Price: 95.06, Short MA: 93.56, Long MA: 91.59
+2026-02-09 18:24:20,499 INFO strategy log [MA_Strategy_Standard] Price: 95.56, Short MA: 93.33, Long MA: 96.70
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Fast] Price: 95.56, Short MA: 94.77, Long MA: 91.87
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Standard] Price: 97.60, Short MA: 94.77, Long MA: 96.11
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Fast] Price: 97.60, Short MA: 96.07, Long MA: 92.46
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Standard] Price: 100.00, Short MA: 96.38, Long MA: 95.77
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Standard] Signal: BUY 0.8746 BTC/USD
+2026-02-09 18:24:20,500 INFO exchange execute_order EXECUTED BUY: 0.8746486979806042 BTC/USD @ 100.00165573590498 | Fee: 0.0875 | Total Cost: 87.5538
+2026-02-09 18:24:20,500 INFO portfolio update Portfolio Updated (BUY): Cash=4.52, BTC/USD=0.8746486979806042
+2026-02-09 18:24:20,500 INFO engine run_step Strategy MA_Strategy_Standard Executed Trade: {'status': 'filled', 'type': 'buy', 'symbol': 'BTC/USD', 'amount': 0.8746486979806042, 'price': 100.00165573590498, 'fee': 0.08746631798531392, 'total': 87.55378430329922}
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Fast] Price: 100.00, Short MA: 97.72, Long MA: 93.39
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Standard] Price: 101.65, Short MA: 97.98, Long MA: 95.51
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Fast] Price: 101.65, Short MA: 99.75, Long MA: 94.59
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Standard] Price: 102.88, Short MA: 99.54, Long MA: 95.41
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Fast] Price: 102.88, Short MA: 101.51, Long MA: 95.88
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Standard] Price: 105.70, Short MA: 101.57, Long MA: 95.52
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Fast] Price: 105.70, Short MA: 103.41, Long MA: 97.45
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Standard] Price: 106.24, Short MA: 103.29, Long MA: 95.77
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Fast] Price: 106.24, Short MA: 104.94, Long MA: 99.03
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Standard] Price: 109.15, Short MA: 105.12, Long MA: 96.32
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Fast] Price: 109.15, Short MA: 107.03, Long MA: 100.75
+2026-02-09 18:24:20,500 INFO strategy log [MA_Strategy_Standard] Price: 109.05, Short MA: 106.60, Long MA: 96.95
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Fast] Price: 109.05, Short MA: 108.15, Long MA: 102.29
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Standard] Price: 109.90, Short MA: 108.01, Long MA: 97.68
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Fast] Price: 109.90, Short MA: 109.37, Long MA: 103.77
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Standard] Price: 110.91, Short MA: 109.05, Long MA: 98.59
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Fast] Price: 110.91, Short MA: 109.95, Long MA: 105.31
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Standard] Price: 108.97, Short MA: 109.60, Long MA: 99.45
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Fast] Price: 108.97, Short MA: 109.93, Long MA: 106.45
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Standard] Price: 109.39, Short MA: 109.64, Long MA: 100.39
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Fast] Price: 109.39, Short MA: 109.76, Long MA: 107.38
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Standard] Price: 108.92, Short MA: 109.62, Long MA: 101.35
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Fast] Price: 108.92, Short MA: 109.09, Long MA: 108.11
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Standard] Price: 105.94, Short MA: 108.83, Long MA: 102.15
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Fast] Price: 105.94, Short MA: 108.08, Long MA: 108.42
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Fast] Signal: SELL 1.6289 BTC/USD
+2026-02-09 18:24:20,501 INFO exchange execute_order EXECUTED SELL: 1.628933438353982 BTC/USD @ 105.94428729216254 | Fee: 0.1726 | Total Revenue: 172.4036
+2026-02-09 18:24:20,501 INFO portfolio update Portfolio Updated (SELL): Cash=180.28, BTC/USD=0.0
+2026-02-09 18:24:20,501 INFO engine run_step Strategy MA_Strategy_Fast Executed Trade: {'status': 'filled', 'type': 'sell', 'symbol': 'BTC/USD', 'amount': 1.628933438353982, 'price': 105.94428729216254, 'fee': 0.17257619217278442, 'total': 172.40361598061162}
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Standard] Price: 105.50, Short MA: 107.75, Long MA: 102.92
+2026-02-09 18:24:20,501 INFO strategy log [MA_Strategy_Fast] Price: 105.50, Short MA: 106.79, Long MA: 108.40
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Standard] Price: 104.22, Short MA: 106.80, Long MA: 103.61
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Fast] Price: 104.22, Short MA: 105.22, Long MA: 108.20
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Standard] Price: 102.16, Short MA: 105.35, Long MA: 104.13
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Fast] Price: 102.16, Short MA: 103.96, Long MA: 107.50
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Standard] Price: 98.72, Short MA: 103.31, Long MA: 104.38
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Standard] Signal: SELL 0.8746 BTC/USD
+2026-02-09 18:24:20,502 INFO exchange execute_order EXECUTED SELL: 0.8746486979806042 BTC/USD @ 98.7158690973273 | Fee: 0.0863 | Total Revenue: 86.2554
+2026-02-09 18:24:20,502 INFO portfolio update Portfolio Updated (SELL): Cash=90.77, BTC/USD=0.0
+2026-02-09 18:24:20,502 INFO engine run_step Strategy MA_Strategy_Standard Executed Trade: {'status': 'filled', 'type': 'sell', 'symbol': 'BTC/USD', 'amount': 0.8746486979806042, 'price': 98.7158690973273, 'fee': 0.08634170637600108, 'total': 86.25536466962508}
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Fast] Price: 98.72, Short MA: 101.70, Long MA: 106.46
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Standard] Price: 96.85, Short MA: 101.49, Long MA: 104.47
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Fast] Price: 96.85, Short MA: 99.24, Long MA: 105.16
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Standard] Price: 95.92, Short MA: 99.57, Long MA: 104.48
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Fast] Price: 95.92, Short MA: 97.16, Long MA: 103.66
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Standard] Price: 94.59, Short MA: 97.65, Long MA: 104.33
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Fast] Price: 94.59, Short MA: 95.79, Long MA: 102.22
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Standard] Price: 91.82, Short MA: 95.58, Long MA: 103.92
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Fast] Price: 91.82, Short MA: 94.11, Long MA: 100.46
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Standard] Price: 90.70, Short MA: 93.98, Long MA: 103.38
+2026-02-09 18:24:20,502 INFO strategy log [MA_Strategy_Fast] Price: 90.70, Short MA: 92.37, Long MA: 98.64
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Standard] Price: 89.72, Short MA: 92.55, Long MA: 102.72
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Fast] Price: 89.72, Short MA: 90.75, Long MA: 97.02
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Standard] Price: 89.36, Short MA: 91.24, Long MA: 101.90
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Fast] Price: 89.36, Short MA: 89.93, Long MA: 95.41
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Standard] Price: 89.34, Short MA: 90.19, Long MA: 101.06
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Fast] Price: 89.34, Short MA: 89.47, Long MA: 93.92
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Standard] Price: 89.92, Short MA: 89.81, Long MA: 100.10
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Fast] Price: 89.92, Short MA: 89.54, Long MA: 92.69
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Standard] Price: 91.66, Short MA: 90.00, Long MA: 99.23
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Fast] Price: 91.66, Short MA: 90.31, Long MA: 91.99
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Standard] Price: 92.77, Short MA: 90.61, Long MA: 98.37
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Fast] Price: 92.77, Short MA: 91.45, Long MA: 91.58
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Standard] Price: 93.79, Short MA: 91.50, Long MA: 97.51
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Fast] Price: 93.79, Short MA: 92.74, Long MA: 91.37
+2026-02-09 18:24:20,503 INFO strategy log [MA_Strategy_Fast] Signal: BUY 1.8260 BTC/USD
+2026-02-09 18:24:20,503 INFO exchange execute_order EXECUTED BUY: 1.8260119279358962 BTC/USD @ 93.79379379944515 | Fee: 0.1713 | Total Cost: 171.4399
+2026-02-09 18:24:20,503 INFO portfolio update Portfolio Updated (BUY): Cash=8.84, BTC/USD=1.8260119279358962
+2026-02-09 18:24:20,504 INFO engine run_step Strategy MA_Strategy_Fast Executed Trade: {'status': 'filled', 'type': 'buy', 'symbol': 'BTC/USD', 'amount': 1.8260119279358962, 'price': 93.79379379944515, 'fee': 0.17126858624414676, 'total': 171.43985483039089}
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Standard] Price: 95.06, Short MA: 92.64, Long MA: 96.82
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Fast] Price: 95.06, Short MA: 93.88, Long MA: 91.41
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Standard] Price: 96.96, Short MA: 94.05, Long MA: 96.20
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Fast] Price: 96.96, Short MA: 95.27, Long MA: 91.93
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Standard] Price: 98.46, Short MA: 95.41, Long MA: 95.67
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Fast] Price: 98.46, Short MA: 96.83, Long MA: 92.70
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Standard] Price: 101.25, Short MA: 97.11, Long MA: 95.44
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Standard] Signal: BUY 0.8517 BTC/USD
+2026-02-09 18:24:20,504 INFO exchange execute_order EXECUTED BUY: 0.8516858395275209 BTC/USD @ 101.24956331452191 | Fee: 0.0862 | Total Cost: 86.3191
+2026-02-09 18:24:20,504 INFO portfolio update Portfolio Updated (BUY): Cash=4.45, BTC/USD=0.8516858395275209
+2026-02-09 18:24:20,504 INFO engine run_step Strategy MA_Strategy_Standard Executed Trade: {'status': 'filled', 'type': 'buy', 'symbol': 'BTC/USD', 'amount': 0.8516858395275209, 'price': 101.24956331452191, 'fee': 0.08623281933332347, 'total': 86.31905215265678}
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Fast] Price: 101.25, Short MA: 98.89, Long MA: 93.86
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Standard] Price: 103.26, Short MA: 99.00, Long MA: 95.33
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Fast] Price: 103.26, Short MA: 100.99, Long MA: 95.25
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Standard] Price: 105.74, Short MA: 101.13, Long MA: 95.40
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Fast] Price: 105.74, Short MA: 103.42, Long MA: 96.89
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Standard] Price: 105.46, Short MA: 102.83, Long MA: 95.57
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Fast] Price: 105.46, Short MA: 104.82, Long MA: 98.44
+2026-02-09 18:24:20,504 INFO strategy log [MA_Strategy_Standard] Price: 107.09, Short MA: 104.56, Long MA: 95.99
+2026-02-09 18:24:20,505 INFO strategy log [MA_Strategy_Fast] Price: 107.09, Short MA: 106.10, Long MA: 99.99
+2026-02-09 18:24:20,505 INFO strategy log [MA_Strategy_Standard] Price: 108.21, Short MA: 105.95, Long MA: 96.56
+2026-02-09 18:24:20,505 INFO strategy log [MA_Strategy_Fast] Price: 108.21, Short MA: 106.92, Long MA: 101.53
+2026-02-09 18:24:20,505 INFO strategy log [MA_Strategy_Standard] Price: 110.21, Short MA: 107.34, Long MA: 97.27
+2026-02-09 18:24:20,505 INFO strategy log [MA_Strategy_Fast] Price: 110.21, Short MA: 108.50, Long MA: 103.17
+2026-02-09 18:24:20,505 INFO strategy log [MA_Strategy_Standard] Price: 110.71, Short MA: 108.34, Long MA: 98.08
+2026-02-09 18:24:20,505 INFO strategy log [MA_Strategy_Fast] Price: 110.71, Short MA: 109.71, Long MA: 104.74
+2026-02-09 18:24:20,505 INFO strategy log [MA_Strategy_Standard] Price: 110.67, Short MA: 109.38, Long MA: 99.02
+2026-02-09 18:24:20,505 INFO strategy log [MA_Strategy_Fast] Price: 110.67, Short MA: 110.53, Long MA: 106.11
+2026-02-09 18:24:20,505 INFO strategy log [MA_Strategy_Standard] Price: 109.80, Short MA: 109.92, Long MA: 99.97
+2026-02-09 18:24:20,505 INFO strategy log [MA_Strategy_Fast] Price: 109.80, Short MA: 110.39, Long MA: 107.24
+2026-02-09 18:24:20,505 INFO strategy log [MA_Strategy_Standard] Price: 107.73, Short MA: 109.82, Long MA: 100.87
+2026-02-09 18:24:20,505 INFO strategy log [MA_Strategy_Fast] Price: 107.73, Short MA: 109.40, Long MA: 107.89
+2026-02-09 18:24:20,505 INFO engine run_backtest Backtest Completed.
+2026-02-09 18:24:20,505 INFO engine print_summary === Performance Summary ===
+2026-02-09 18:24:20,505 INFO engine print_summary Strategy: MA_Strategy_Standard
+2026-02-09 18:24:20,505 INFO engine print_summary   Final Capital: 4.45
+2026-02-09 18:24:20,505 INFO engine print_summary   Positions: {'BTC/USD': 0.8516858395275209}
+2026-02-09 18:24:20,505 INFO engine print_summary Strategy: MA_Strategy_Fast
+2026-02-09 18:24:20,506 INFO engine print_summary   Final Capital: 8.84
+2026-02-09 18:24:20,506 INFO engine print_summary   Positions: {'BTC/USD': 1.8260119279358962}
