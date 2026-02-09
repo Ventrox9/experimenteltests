@@ -3,3 +3,4 @@ __pycache__/
 logs/
 .pytest_cache/
 optimization_results.csv
+live_status.txt

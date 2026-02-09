@@ -8,7 +8,10 @@ Dies ist ein robustes Framework für einen Trading-Bot, entwickelt, um mit virtu
 - **Strategie-Optimierung**: Testet automatisch verschiedene Parameter, um die profitabelste Einstellung für die aktuellen Marktbedingungen zu finden.
 - **Live Paper Trading**: Simuliert den Handel in Echtzeit mit aktuellen Preisen.
 - **Risikomanagement**: Verhindert, dass das Kapital unter Null fällt. Das Portfolio startet mit 100 Einheiten virtuellem Kapital.
-- **Logging & Analyse**: Detaillierte Logs in `logs/trading_bot.log` und CSV-Export.
+- **Logging & Analyse**:
+    - Detaillierte Logs in `logs/trading_bot.log`.
+    - CSV-Export der Ergebnisse in `optimization_results.csv`.
+    - **Live-Status**: Eine Datei `live_status.txt` wird im Live-Modus ständig aktualisiert und zeigt den aktuellen Profit/Verlust auf einen Blick.
 
 ## Installation
 
@@ -53,8 +56,35 @@ Beenden mit `Ctrl+C`.
 
 ## Ergebnisse analysieren
 
-- **Konsole**: Zeigt Live-Status ("Current Price", "Waiting for next tick...") und Trades.
-- **logs/trading_bot.log**: Detaillierte Aufzeichnungen aller Aktionen.
+### Im Live-Modus
+Öffne die Datei `live_status.txt`. Diese wird jede Minute aktualisiert und sieht so aus:
+
+```text
+========================================
+TRADING BOT LIVE STATUS
+========================================
+Timestamp:      2025-02-09 20:01:05
+Market:         BTC/USD
+Current Price:  $45123.50
+
+STRATEGY:       LiveMAStrategy
+Status:         LONG (Invested)
+----------------------------------------
+FINANCIALS
+----------------------------------------
+Cash:           $5.20
+Assets (BTC/USD): 0.002100
+Asset Value:    $94.76
+----------------------------------------
+TOTAL EQUITY:   $99.96
+PROFIT/LOSS:    $-0.04 (-0.04%)
+========================================
+```
+
+Das ist ideal, um auf einem zweiten Bildschirm oder in einem separaten Terminal (mit `watch cat live_status.txt`) den aktuellen Stand zu überwachen.
+
+### Logs & CSV
+- **logs/trading_bot.log**: Detaillierte Historie.
 - **optimization_results.csv**: Ergebnisse der Parameter-Suche.
 
 ## Hinweise

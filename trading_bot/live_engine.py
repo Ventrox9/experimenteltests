@@ -1,5 +1,6 @@
 import time
 from trading_bot.logger import logger
+from trading_bot.status_logger import StatusLogger
 
 class LiveTradingEngine:
     def __init__(self, exchange, strategies, interval=60):
@@ -15,6 +16,7 @@ class LiveTradingEngine:
         self.strategies = strategies
         self.interval = interval
         self.is_running = False
+        self.status_logger = StatusLogger()
 
     def start(self):
         """Start the live trading loop."""
@@ -54,7 +56,7 @@ class LiveTradingEngine:
                 return
 
             # 2. Update strategies
-            for strategy in self.strategies:
+            for i, strategy in enumerate(self.strategies):
                 symbol = strategy.symbol
                 price = current_prices.get(symbol)
 
@@ -76,6 +78,10 @@ class LiveTradingEngine:
                     if trade_result:
                         strategy.portfolio.update(trade_result)
                         logger.info(f"LIVE TRADE: Strategy {strategy.name} Executed {order_type.upper()} {amount} {symbol} @ {price}")
+
+                # 3. Update Status File (Assuming first strategy is main)
+                if i == 0:
+                     self.status_logger.update(price, strategy)
 
         except Exception as e:
             logger.error(f"Error in live tick: {e}")
